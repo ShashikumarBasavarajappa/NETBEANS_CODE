@@ -11,5 +11,7 @@
         <div style="background-color: green;height: 200px;width: 500px">
             <h1 style="color:black;"> ${printme}</h1>
         </div>
+        <a href="empform.htm">Add Employee</a>  
+        <a href="viewemp.htm">View Employees</a>  
     </body>
 </html>
