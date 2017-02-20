@@ -54,11 +54,10 @@ public class Emp {
     public String getDesignation() {
         return designation;
     }
- 
-    public void setDesignations(String designation) {
+
+    public void setDesignation(String designation) {
         this.designation = designation;
-    }
-    
+    }    
     
     
 }
