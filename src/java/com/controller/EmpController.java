@@ -28,12 +28,12 @@ public class EmpController {
     @Autowired
     EmpDao dao;
     
-     @RequestMapping("/empform.htm")  
+     @RequestMapping("/empform")  
     public ModelAndView showform(){  
          //command is a reserved request attribute name, now use <form> tag to show object data  
         return new ModelAndView("empform","command",new Emp());  
     }
-    @RequestMapping(value="/save.htm",method = RequestMethod.POST)  
+    @RequestMapping(value="/save",method = RequestMethod.POST)  
     public ModelAndView save(@ModelAttribute("emp") Emp emp){  
         //write code to save emp object  
         //here, we are displaying emp object to prove emp has data  
@@ -41,9 +41,9 @@ public class EmpController {
           
         dao.save(emp);
         //return new ModelAndView("empform","command",emp);//will display object data  
-        return new ModelAndView("redirect:/viewemp.htm");//will redirect to viewemp request mapping  
+        return new ModelAndView("redirect:/viewemp");//will redirect to viewemp request mapping  
     } 
-       @RequestMapping("/viewemp.htm")  
+       @RequestMapping("/viewemp")  
     public ModelAndView viewemp(){  
         //write the code to get all employees from DAO  
         //here, we are writing manual code of list for easy understanding  
@@ -60,22 +60,22 @@ public class EmpController {
     } 
     /* It displays object data into form for the given id. 
 	 * The @PathVariable puts URL data into variable.*/
-	@RequestMapping(value="/editemp.htm/{id}")
+	@RequestMapping(value="/editemp/{id}")
 	public ModelAndView edit(@PathVariable int id){
 		Emp emp=dao.getEmpById(id);
 		return new ModelAndView("empeditform","command",emp);
 	}
 	/* It updates model object. */
-	@RequestMapping(value="/editsave.htm",method = RequestMethod.POST)
+	@RequestMapping(value="/editsave",method = RequestMethod.POST)
 	public ModelAndView editsave(@ModelAttribute("emp") Emp emp){
 		dao.update(emp);
-		return new ModelAndView("redirect:/viewemp.htm");
+		return new ModelAndView("redirect:/viewemp");
 	}
 	/* It deletes record for the given id in URL and redirects to /viewemp */
-	@RequestMapping(value="/deleteemp.htm/{id}",method = RequestMethod.GET)
+	@RequestMapping(value="/deleteemp/{id}",method = RequestMethod.GET)
 	public ModelAndView delete(@PathVariable int id){
 		dao.delete(id);
-		return new ModelAndView("redirect:/viewemp.htm");
+		return new ModelAndView("redirect:/viewemp");
 	}
 
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author insbasavar
  */
 @Controller
-@RequestMapping("/helloworld.htm")
+@RequestMapping("/helloworld")
 public class HelloController {
  
     @RequestMapping(method = RequestMethod.GET)

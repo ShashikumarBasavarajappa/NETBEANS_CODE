@@ -11,8 +11,8 @@
         <div style="background-color: green;height: 200px;width: 500px">
             <h1 style="color:black;"> ${printme}</h1>
         </div>
-        <a href="empform.htm">Add Employee</a>  
-        <a href="viewemp.htm">View Employees</a>  
-        <a href="home.htm">HOME DATABASE</a>  
+        <a href="empform">Add Employee</a>  
+        <a href="viewemp">View Employees</a>  
+        <a href="home">HOME DATABASE</a>  
     </body>
 </html>

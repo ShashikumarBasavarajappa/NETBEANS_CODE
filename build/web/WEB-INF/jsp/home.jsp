@@ -28,9 +28,9 @@
                     <td>${contact.address}</td>
                     <td>${contact.telephone}</td>
                     <td>
-                        <a href="/editContact.htm?id=${contact.id}">Edit</a>
+                        <a href="/editContact?id=${contact.id}">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/deleteContact.htm?id=${contact.id}">Delete</a>
+                        <a href="/deleteContact?id=${contact.id}">Delete</a>
                     </td>
                              
                 </tr>
