@@ -7,6 +7,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Contact Manager Home</title>
+        <spring:url value="/resources/crunchify.css" var="crunchifyCSS" />
+        <spring:url value="/resources/crunchify.js" var="crunchifyJS" />
+        <style type="text/css">
+            body {
+                background-color: pink;
+            }
+        </style>
     </head>
     <body>
         <div align="center">

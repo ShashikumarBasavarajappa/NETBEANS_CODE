@@ -21,7 +21,7 @@ public class HelloController {
     @RequestMapping(method = RequestMethod.GET)
     public String helloWorld(ModelMap modelMap) {
         System.out.println("on method");
-        modelMap.put("printme", "Hello Spring SHASHIKUMAR !!");
+        modelMap.put("printme", "SHASHIKUMAR !!");
         return "index";
     }
 }
