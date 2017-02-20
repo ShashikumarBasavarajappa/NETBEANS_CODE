@@ -13,5 +13,6 @@
         </div>
         <a href="empform.htm">Add Employee</a>  
         <a href="viewemp.htm">View Employees</a>  
+        <a href="home.htm">HOME DATABASE</a>  
     </body>
 </html>
