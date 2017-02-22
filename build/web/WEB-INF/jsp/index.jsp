@@ -62,7 +62,7 @@
                     <div class="wrapper">
                     <span class="group-btn">     
                         <a href="#" class="btn btn-primary btn-md">Login <i class="fa fa-sign-in"></i></a>
-                        <a href="#" class="btn btn-primary btn-md">Register <i class="fa fa-sign-in"></i></a>
+                        <a href="Register" class="btn btn-primary btn-md">Register <i class="fa fa-sign-in"></i></a>
                     </span>
                     </div>
                     </div>
