@@ -51,15 +51,25 @@
                 <legend> Designed By ${printme} WEB APPLICATION</legend>
             </header>
             <!--login  form come here --> 
-            <form class="form-horizontal" method="post" action="save">
+            <form class="form-horizontal" method="post" action="login">
              <div class="row">
                 <div class="col-md-offset-5 col-md-3">
                     <div class="form-login">
                     <h4>Hello Shashi,,,,</h4>
-                    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" />
-                    </br>
-                    <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
-                    </br>
+                  <div class="form-group">
+                    <label for="firstname" class="col-sm-3 control-label">EMAIL</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="email" name="email" placeholder="USERNAME" class="form-control" autofocus>
+                        
+                    </div>
+                </div>                
+                    <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">PASSWORD</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="PASSWORD" class="form-control" autofocus>
+                        
+                    </div>
+                </div>
                     <div class="wrapper">
                     <span class="group-btn">     
                         <button type="submit" class="btn btn-primary btn-block">Login</button><br />
