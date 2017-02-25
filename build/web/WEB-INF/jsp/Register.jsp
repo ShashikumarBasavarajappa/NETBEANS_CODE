@@ -15,9 +15,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form method="post" action="Registersave"> 
+        <form class="form-horizontal" method="post" action="Registersave"> 
+             <fieldset>
+                <div id="legend">
+                  <legend class="">Register</legend>
+                </div>
         <div class="container">
-                <h2>Registration Form</h2>
+                
                 <div class="form-group">
                     <label for="firstname" class="col-sm-3 control-label">Full Name</label>
                     <div class="col-sm-9">
@@ -43,6 +47,7 @@
                     </div>
                 </div>
         </div> <!-- ./container -->
+        </fieldset>
         </form>
     </body>
 </html>

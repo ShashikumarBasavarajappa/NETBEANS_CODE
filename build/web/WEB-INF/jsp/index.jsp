@@ -51,6 +51,7 @@
                 <legend> Designed By ${printme} WEB APPLICATION</legend>
             </header>
             <!--login  form come here --> 
+            <form class="form-horizontal" method="post" action="save">
              <div class="row">
                 <div class="col-md-offset-5 col-md-3">
                     <div class="form-login">
@@ -61,7 +62,7 @@
                     </br>
                     <div class="wrapper">
                     <span class="group-btn">     
-                        <a href="#" class="btn btn-primary btn-md">Login <i class="fa fa-sign-in"></i></a>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button><br />
                         <a href="Register" class="btn btn-primary btn-md">Register <i class="fa fa-sign-in"></i></a>
                     </span>
                     </div>
@@ -69,6 +70,7 @@
 
                 </div>
             </div>
+            </form>
             <!-- designed for exa,ple -->
             <hr>
             
