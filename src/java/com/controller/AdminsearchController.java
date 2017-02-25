@@ -33,11 +33,11 @@ public class AdminsearchController {
         //write code to save emp object  
         //here, we are displaying emp object to prove emp has data  
         //System.out.println(adminsearch);
-       List<Register> list = dao1.search(register);
+       List<Register> searchresult = dao1.search(register);
        
         //dao2.search(emp);
         //return new ModelAndView("empform","command",emp);//will display object data  
-        return new ModelAndView("AdminHome","list",list);//will redirect to viewemp request mapping  
+        return new ModelAndView("AdminHome","searchresult",searchresult);//will redirect to viewemp request mapping  
     } 
     
         @RequestMapping("/Adminview")  

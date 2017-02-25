@@ -16,6 +16,8 @@
          <link type="text/css" href="<%=request.getContextPath() %>/resources/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <link type="text/css" href="<%=request.getContextPath() %>/resources/css/bootstrap/js/bootstrap.min.js" rel="stylesheet"/>
         <link type="text/css" href="<%=request.getContextPath() %>/resources/css/adminhome.css" rel="stylesheet"/>
+        <script src="<c:url value="/resources/jquery/js/jquery-1.8.3.min.js" />"></script>
+        
     </head>
     
     <body>	
@@ -52,8 +54,9 @@
         </ul>
     </div>
 </nav>
+            <div class="container-fluid">
             <div class="well-searchbox">
-                <form class="form-horizontal" action="Adminsearch" method-="get">
+                <form id="sampleForm" class="form-horizontal" action="Adminsearch" method-="get">
                     <div class="form-group">
                         <label class="col-md-4 control-label">Keyword</label>
                         <div class="col-md-8">
@@ -110,14 +113,37 @@
                 </form>
             </div>
             </div>
-        <table border="2" width="70%" cellpadding="2">  
-            <tr><th>Name</th></tr>  
-                <c:forEach var="emp" items="${list}">   
-                    <tr>  
-                    <td>${emp.email}</td>   
-                    </tr>  
-                    </c:forEach>  
-                    </table> 
+            &nbsp;
+            &nbsp;
+        <c:if test="${empty searchresult}">
+            <br />
+            <div>Please wait for the search result </div>
+         </c:if>
+         <c:if test="${not empty searchresult}">
+              <table class="table table-bordered table-inverse"  >
+                   <thead style="background-color: black;color:red;"   >
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Email</th>
+                      <th>Accept/Reject</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <c:forEach var="emp" items="${searchresult}">   
 
+                    <tr>
+                       <td>${emp.id}</td>
+                       <td>${emp.firstname}</td>
+                       <td>${emp.email}</td>
+                       <td>
+                           <input type="checkbox" checked data-toggle="toggle" data-style="android" data-onstyle="info">
+                       </td>
+                    </tr>
+                  </tbody>
+                 </c:forEach>  
+              </c:if>
+             </table> 
+    </div>
     </body>
 </html>
