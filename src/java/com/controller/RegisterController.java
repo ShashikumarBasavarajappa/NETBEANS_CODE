@@ -44,9 +44,9 @@ public class RegisterController {
         
          @RequestMapping("/AdminHome")  
     public ModelAndView viewemp(){  
-     
-        List<Register> list=dao1.getEmployees();
-        return new ModelAndView("AdminHome","list",list);
+        
+        //List<Register> list=dao1.getEmployees();
+        return new ModelAndView("AdminHome");
 
         //return new ModelAndView("viewemp","list",list);  
     } 
