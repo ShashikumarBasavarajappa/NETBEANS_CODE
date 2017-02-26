@@ -41,5 +41,9 @@
     </bean>
      <bean id="dao1" class="com.dao.RegisterDao">  
         <property name="template" ref="jt"></property>  
+    </bean>
+    
+     <bean id="dao2" class="com.dao.AdminsearchDao">  
+        <property name="template" ref="jt"></property>  
     </bean>  
 </beans>
