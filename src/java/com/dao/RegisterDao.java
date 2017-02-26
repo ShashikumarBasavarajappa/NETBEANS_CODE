@@ -24,6 +24,18 @@ public class RegisterDao {
     public void setTemplate(JdbcTemplate template) {
         this.template = template;
     }
+    public Register login(String username,String password){
+            System.out.println("username " + username + "password " + password);
+            String sql="select * from AdminRegister where email=? and password=?";
+           Register userlist = template.queryForObject(sql, new Object[]{username,password},new BeanPropertyRowMapper<Register>(Register.class));
+           
+           return userlist;
+    }
+    
+     public Register getEmpById(int id){
+            String sql="select * from AdminRegister where id=?";
+            return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Register>(Register.class));
+    }
     public int save(Register r){
 	String sql="insert into AdminRegister(firstname,email,password) values('"+r.getFirstname()+"','"+r.getEmail()+"','"+r.getPassword()+"')";
 	return template.update(sql);

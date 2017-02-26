@@ -37,7 +37,7 @@
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Search</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="profile/${reg.id}">Profile</a></li>
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages <b class="caret"></b></a>
                 <ul role="menu" class="dropdown-menu">
@@ -50,6 +50,12 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            <li><h4>Welcome
+                    <c:if test="${not empty reg.firstname}">
+                        ${reg.firstname}
+                    </c:if>
+                
+                </h4></li>
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
@@ -109,6 +115,7 @@
                     </div>
                     <div class="col-sm-offset-4 col-sm-5">
                         <button type="submit" class="btn btn-success">Search</button>
+                        
                     </div>
                 </form>
             </div>
@@ -130,6 +137,7 @@
                     </tr>
                   </thead>
                   <tbody>
+                  
                   <c:forEach var="emp" items="${searchresult}">   
 
                     <tr>

@@ -14,6 +14,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -42,19 +43,13 @@ public class AdminsearchController {
     
         @RequestMapping("/Adminview")  
     public ModelAndView viewemp(){  
-        //write the code to get all employees from DAO  
-        //here, we are writing manual code of list for easy understanding  
-        /*
-        List<Emp> list=new ArrayList<Emp>();  
-        list.add(new Emp(1,35000f,"rahul","S.Engineer"));  
-        list.add(new Emp(2,25000f,"aditya","IT Manager"));  
-        list.add(new Emp(3,55000f,"sachin","Care Taker"));  
-          */
-        //List<Emp> list=dao.getEmployees();
-        //return new ModelAndView("viewemp","list",list);
-        //return new ModelAndView("redirect:/AdminHome");
+      
         return new ModelAndView("viewemp");
     } 
-   
-  
+    //profile
+    @RequestMapping(value="/profile/{id}")
+	public ModelAndView profile(@PathVariable int id){
+		Register profile=dao1.getEmpById(id);
+		return new ModelAndView("profile","profile",profile);
+	}
 }

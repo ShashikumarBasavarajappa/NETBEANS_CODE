@@ -36,12 +36,18 @@ public class LoginController {
                 return new ModelAndView("redirect:/helloworld");
              }
              else{
-                     return new ModelAndView("redirect:/helloworld");
+                     Register reg  = dao1.login(username,password);
+                     //if(reg)
+                     //System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhh" + reg);
+                    // System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhh" + reg.getPassword());
+                     //redirectAttributes.addAttribute("reg", "reg");
+                     return new ModelAndView("AdminHome","reg",reg);
              }
              
              
             // Login login=dao1.getEmpById(username,password);
 	     //return new ModelAndView("empeditform","command",emp);
+             //return new ModelAndView("redirect:/AdminHome");
          }
         
 }
